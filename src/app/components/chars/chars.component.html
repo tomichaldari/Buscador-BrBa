@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="mt-4">
+      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="search" (ngModelChange)="rechargeChars()"/>
+    </div>
+    <div class="row">
+      <div class="col-4 d-flex" *ngFor="let character of searchChars">
+        <div class="card" style= "width: 20rem;">
+          <img src="{{ character.img }}" class="card-img-top"  alt="..." />
+          <div class="card-body">
+            <h2 class="card-title">{{ character.name }}</h2>
+            <br>
+            <h6>{{character.nickname}}</h6>
+            <br>
+            <p class="card-title">{{ character.birthday }} </p>
+            <br>
+            <p class="card-text">
+              {{ character.occupation }}
+            </p>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
